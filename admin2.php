@@ -1,7 +1,7 @@
 <?php
 require_once 'classes/AbstractDB.php';
 
-$clientDB = new AbstractDB('clients');
+$productDB = new AbstractDB('products');
 
 ?>
 
@@ -24,27 +24,24 @@ $clientDB = new AbstractDB('clients');
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Email</th>
-                    <th>Password</th>
                     <th>Description</th>
-                    <th>Actions</th>
+                    <th>Price</th>
+                    <th>BlobIMG</th>
+                    <th>Available</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $data = $clientDB->readAll(); 
+                $data = $productDB->readAll(); 
                 // Dynamic rows
                 foreach($data as $row) {
                     echo "<tr>";
-                    echo "<td>" . $row['id'] . "</td>";
+                    echo "<td>" . $row['ID'] . "</td>";
                     echo "<td>" . $row['name'] . "</td>";
-                    echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['password'] . "</td>";
                     echo "<td>" . $row['description'] . "</td>";
-                    echo "<td>";
-                    echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-warning btn-sm">Edit</a>';
-                    echo '<a href="delete.php?id=' . $row['id'] . '" class="btn btn-danger btn-sm">Delete</a>';
-                    echo "</td>";
+                    echo "<td>" . $row['price'] . "</td>";
+                    echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['blobIMG']) . "' alt='Image' class='blobimg' style='max-width: 64px; max-height: 64px; object-fit: contain;'></td>";
+                    echo "<td>" . $row['available'] . "</td>";
                     echo "</tr>";
                 }
 

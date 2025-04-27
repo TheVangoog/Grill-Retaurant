@@ -1,14 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "grill";
+require_once 'classes/AbstractDB.php';
 
-$connection = new mysqli($servername, $username, $password, $dbname);
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
+$clientDB = new AbstractDB('clients');
 
+?>
+
+<?php
 
 $name = "";
 $email = "";
@@ -17,46 +14,17 @@ $description = "";
 $errorMessage = "";
 $sucessMeseege = "";
 
+// no valiation + securing password yet
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $description = $_POST['description'];
-
-    do {
-        if (empty($name) || empty($email) || empty($password) || empty($description)) {
-            $errorMessage = "Please fill in all fields.";
-            break;
-        }
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errorMessage = "Invalid email format.";
-            break;
-        }
-
-        $checkEmailSql = "SELECT * FROM clients WHERE email = '$email'";
-        $checkEmailResult = $connection->query($checkEmailSql);
-        if ($checkEmailResult && $checkEmailResult->num_rows > 0) {
-            $errorMessage = "Email already taken.";
-            break;
-        }
-
-         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-         $sql = "INSERT INTO clients (name, email, password, description) VALUES ('$name', '$email', '$hashedPassword', '$description')";
-         $result = $connection->query($sql);
-         if (!$result) {
-            die("Query failed: " . $connection->error);
-        }
-        $name = "";
-        $email = "";
-        $password = "";
-        $description = "";
-
-        $sucessMeseege = "Client added successfully!";
-        header("location: admin.php");
-        exit;
-
-    } while (false);
+    $clientDB->create($name, $email, $password, $description);
+    $sucessMeseege = "Client added successfully!";
+    header("location: admin.php");
+    exit;
 }
 // Remove the else block that was here
 ?>
