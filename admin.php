@@ -1,11 +1,7 @@
 <?php
-require_once 'classes/UniversalDB.php';
 
-$clientDB = new UniversalDB('clients');
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
