@@ -47,36 +47,26 @@ class User
         }
     }
 
-    public function  register($name, $email, $password, $description) {
-        $clientDB = new UniversalDB('clients');
-        $clientDB->create($name, $email, $password, $description);;
-        
-        $this->login($email, $password);;
+    public function register($name, $email, $password, $description): bool
+    {
+        if (empty($name) || empty($email) || empty($password) || empty($description)) {
+            return false;
+        }
+
+        try {
+            $clientDB = new UniversalDB('clients');
+            $clientDB->create($name, $email, $password, $description);
+            $this->login($email, $password);
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
     }
 
     public function logout()
     {
         session_destroy();
         debug_to_console("Logout Success");
-    }
-
-    public function wishlistRemove($ID)
-    {
-        $wishlist = array();
-        if (isset($_COOKIE['wishlist'])) {
-            $decoded = json_decode($_COOKIE['wishlist'], true);
-            if (is_array($decoded)) {
-                $wishlist = $decoded;
-                if (isset($wishlist[$_SESSION['email']])) {
-                    $key = array_search($ID, array_reverse($wishlist[$_SESSION['email']], true));
-                    if ($key !== false) {
-                        unset($wishlist[$_SESSION['email']][$key]);
-                        $wishlist[$_SESSION['email']] = array_values($wishlist[$_SESSION['email']]);
-                        setcookie('wishlist', json_encode($wishlist), time() + (86400 * 30), '/');
-                    }
-                }
-            }
-        }
     }
 
     public function wishlistAdd($ID)
@@ -101,20 +91,15 @@ class User
     }
 
 
+
     public function wishlistClear()
     {
-        if (isset($_COOKIE['wishlist'])) {
+        if (isset($_SESSION['email']) && isset($_COOKIE['wishlist'])) {
             $wishlist = json_decode($_COOKIE['wishlist'], true);
-            if (isset($_SESSION['email'])) {
-                if (isset($wishlist[$_SESSION['email']])) {
-                    unset($wishlist[$_SESSION['email']]);
-                }
-            } else {
-                if (isset($wishlist[""])) {
-                    unset($wishlist[""]);
-                }
+            if (isset($wishlist[$_SESSION['email']])) {
+                unset($wishlist[$_SESSION['email']]);
+                setcookie('wishlist', json_encode($wishlist), time() + (86400 * 30), '/');
             }
-            setcookie('wishlist', json_encode($wishlist), time() + (86400 * 30), '/');
         }
     }
     public function getEmail()
