@@ -56,6 +56,8 @@ include "partials/header.php" ?>
                                         <div class="hover">
                                             <div class="hover-iner">
                                                 <a class="fancybox"
+                                                   onclick="window.location.href='_functions/add-wishlist.php?id=' + this.getAttribute('data-product-id')"
+                                                   data-product-id="<?php echo $row['ID']; ?>"
                                                    href="data:image/jpeg;base64,<?php echo base64_encode($row['blobIMG']); ?>">
                                                     <img src="images/open-icon.png" alt=""/>
                                                 </a>
@@ -95,3 +97,4 @@ include "partials/header.php" ?>
 
 <?php
 include "partials/footer.php" ?>
+

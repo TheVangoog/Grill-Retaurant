@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/../classes/User.php';
+$user = new User();
+
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -39,13 +45,14 @@ http://www.templatemo.com/free-website-templates/417-grill
                             <div class="col-md-6">
                                 <div class="home-account">
                                     <a href="#">Home</a>
-                                    <a href="pages/login.php">Login</a>
+                                    <a href="pages/login.php"><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Login'; ?></a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cart-info">
                                     <i class="fa fa-shopping-cart"></i>
-                                    (<a href="#">5 items</a>) in your cart (<a href="#">$45.80</a>)
+                                    (<a href="pages/wishlist.php">5 items</a>) in your cart (<a
+                                            href="pages/wishlist.php">$45.80</a>)
                                 </div>
                             </div>
                         </div>

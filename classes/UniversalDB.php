@@ -137,6 +137,27 @@ class UniversalDB
             throw new Exception("Failed to update record");
         }
     }
+    public function getEmail($email) {
+        try {
+            if (empty($email)) {
+                throw new InvalidArgumentException("Email is required.");
+            }
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                throw new InvalidArgumentException("Invalid email format.");
+            }
+            $prep = $this->getConnection()->prepare("SELECT * FROM {$this->tableName} WHERE email = :email");
+            $prep->bindParam(':email', $email, PDO::PARAM_STR);
+            $prep->execute();
+            $prep->setFetchMode(PDO::FETCH_ASSOC);
+            $data = $prep->fetchAll();
+            return $data;
+        }
+        catch (InvalidArgumentException $e) {
+            echo "Validation Error: " . $e->getMessage();
+        } catch (PDOException $e) {
+            echo "Database Error: " . $e->getMessage();
+        }
+    }
     
 }
 

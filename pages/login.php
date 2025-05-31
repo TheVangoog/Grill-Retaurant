@@ -1,3 +1,10 @@
+
+<?php
+require_once '../classes/User.php';
+$user = new User();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +16,19 @@
 <body class="bg-light">
 <div class="container">
     <div class="row justify-content-center mt-5">
+        
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
+                    <a href="../index.php" class="btn btn-secondary mb-3">Back</a>
                     <div id="loginForm">
+                        <?php
+                        if (!empty($_POST)) {
+                            $user->login($_POST['email'], $_POST['password']);
+                        }
+                        ?>
                         <h2 class="text-center mb-4">Login</h2>
-                        <form method="POST" action="">
+                        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
@@ -28,6 +42,21 @@
                         <p class="text-center mt-3">Don't have an account?
                             <button onclick="toggleForms()" class="btn btn-link p-0">Register</button>
                         </p>
+                        <?php if (isset($_SESSION['email'])): ?>
+                            <p class="text-center mt-3">Currently logged in as:
+                                <button onclick="window.location.href='../_functions/logout.php'" class="btn btn-link p-0">
+                                    Logout from <?php echo $_SESSION['email']; ?>
+                                </button>
+                            </p>
+                        <?php endif; ?>
+                        
+                    </div>
+                    <?php
+                    if (isset($_GET['logout'])) {
+                            header('Location: logout.php');
+                            exit();
+                        }
+                        ?>
                     </div>
                     <div id="registerForm" style="display: none;">
                         <h2 class="text-center mb-4">Register</h2>
