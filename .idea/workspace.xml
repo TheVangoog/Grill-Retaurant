@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19730685-9a65-45b7-af63-d03f98799fdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_functions/add-wishlist.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_functions/clear-wishlist.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_functions/debug_to_console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_functions/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_functions/remove-wishlist.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/wishlist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_functions/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/UniversalDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/UniversalDB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/templatemo_misc.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/templatemo_misc.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,26 +85,12 @@
       <workItem from="1748193058580" duration="1830000" />
       <workItem from="1748194925724" duration="14147000" />
       <workItem from="1748289484606" duration="12737000" />
-      <workItem from="1748388098163" duration="12182000" />
+      <workItem from="1748388098163" duration="14150000" />
+      <workItem from="1748654603594" duration="2578000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/classes/User.php</url>
-          <line>74</line>
-          <properties>
-            <option name="className" value="\User" />
-            <option name="methodName" value="wishlistRemove" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

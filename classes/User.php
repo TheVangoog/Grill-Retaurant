@@ -47,6 +47,22 @@ class User
         }
     }
 
+    public function register($name, $email, $password, $description): bool
+    {
+        if (empty($name) || empty($email) || empty($password) || empty($description)) {
+            return false;
+        }
+
+        try {
+            $clientDB = new UniversalDB('clients');
+            $clientDB->create($name, $email, $password, $description);
+            $this->login($email, $password);
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
     public function logout()
     {
         session_destroy();

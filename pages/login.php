@@ -1,6 +1,6 @@
-
 <?php
 require_once '../classes/User.php';
+require_once '../_functions/debug_to_console.php';;
 $user = new User();
 
 ?>
@@ -19,12 +19,36 @@ $user = new User();
         
         <div class="col-md-6">
             <div class="card">
+                <div class="text-start m-3">
+                    <a href="../index.php" class="btn btn-secondary">&larr; Back</a>
+                </div>
                 <div class="card-body">
-                    <a href="../index.php" class="btn btn-secondary mb-3">Back</a>
                     <div id="loginForm">
                         <?php
                         if (!empty($_POST)) {
-                            $user->login($_POST['email'], $_POST['password']);
+                            foreach ($_POST as $key => $value) {
+                                debug_to_console("$key: $value");
+                            }
+                            if (isset($_POST['email']) && isset($_POST['password'])) {
+                                $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+                                $password = $_POST['password'];
+                                if ($email !== false) {
+                                    $user->login($email, $password);
+                                }
+                            } else if (isset($_POST['reg_email']) && isset($_POST['reg_password'])) {
+                                $email = filter_var($_POST['reg_email'], FILTER_SANITIZE_EMAIL);
+                                $password = $_POST['reg_password'];
+                                $name = $_POST['reg_name'];
+                                $description = $_POST['reg_description'];
+                                if ($email !== false) {
+                                    $clientDB = new UniversalDB('clients');
+                                    if (empty($clientDB->getEmail($email))) {
+                                        $user->register($name, $email, $password, $description);
+                                    } else {
+                                        echo '<div class="alert alert-warning">Email already registered</div>';
+                                    }
+                                }
+                            }
                         }
                         ?>
                         <h2 class="text-center mb-4">Login</h2>
@@ -56,33 +80,35 @@ $user = new User();
                             header('Location: logout.php');
                             exit();
                         }
-                        ?>
-                    </div>
-                    <div id="registerForm" style="display: none;">
-                        <h2 class="text-center mb-4">Register</h2>
-                        <form method="POST" action="">
-                            <div class="mb-3">
-                                <label for="reg_name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="reg_name" name="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="reg_email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="reg_email" name="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="reg_password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="reg_password" name="password" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="description" class="form-label">Description</label>
-                                <textarea class="form-control" id="description" name="description" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Register</button>
-                        </form>
-                        <p class="text-center mt-3">Already have an account?
-                            <button onclick="toggleForms()" class="btn btn-link p-0">Login</button>
-                        </p>
-                    </div>
+                    ?>
+                </div>
+                <div id="registerForm" style="display: none;">
+                    <h2 class="text-center mb-4">Register</h2>
+                    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <div class="mb-3">
+                            <label for="reg_name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="reg_name" name="reg_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reg_email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="reg_email" name="reg_email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reg_password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="reg_password" name="reg_password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reg_description" class="form-label">Description</label>
+                            <textarea class="form-control" id="reg_description" name="reg_description"
+                                      required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                    <p class="text-center mt-3">Already have an account?
+                        <button onclick="toggleForms()" class="btn btn-link p-0">Login</button>
+                    </p>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
