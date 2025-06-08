@@ -117,6 +117,42 @@ class User
             setcookie('wishlist', json_encode($wishlist), time() + (86400 * 30), '/');
         }
     }
+
+    public function getWishlistPrice()
+    {
+        $price = 0;
+        if (isset($_COOKIE['wishlist'])) {
+            $decoded = json_decode($_COOKIE['wishlist'], true);
+            if (is_array($decoded)) {
+                $wishlist = $decoded;
+                if (isset($wishlist[$_SESSION['email']])) {
+                    foreach ($wishlist[$_SESSION['email']] as $item) {
+                        $productDB = new UniversalDB('products');
+                        $product = $productDB->readID($item);
+                        if (isset($product[0]['price'])) {
+                            $price += $product[0]['price'];
+                        }
+                    }
+                }
+            }
+        }
+        return $price;
+    }
+
+    public function getWishlistCount()
+    {
+        $count = 0;
+        if (isset($_COOKIE['wishlist'])) {
+            $decoded = json_decode($_COOKIE['wishlist'], true);
+            if (is_array($decoded)) {
+                $wishlist = $decoded;
+                if (isset($wishlist[$_SESSION['email']])) {
+                    $count = count($wishlist[$_SESSION['email']]);
+                }
+            }
+        }
+        return $count;
+    }
     public function getEmail()
     {
         return $this->email;

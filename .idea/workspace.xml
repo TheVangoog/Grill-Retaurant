@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e460ab6e-49c3-4482-834c-85e56e8ecf93" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/_functions/product-delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_functions/products-create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_functions/products-edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/noImagePlaceholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin-create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin-edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_functions/remove-wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/_functions/remove-wishlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wishlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,21 +39,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\templatemo_417_grill\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -59,7 +75,8 @@
       <option name="presentableId" value="Default" />
       <updated>1748694457226</updated>
       <workItem from="1748694458784" duration="15000" />
-      <workItem from="1748694510630" duration="1515000" />
+      <workItem from="1748694510630" duration="2183000" />
+      <workItem from="1749216346169" duration="21286000" />
     </task>
     <servers />
   </component>

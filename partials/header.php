@@ -51,8 +51,9 @@ http://www.templatemo.com/free-website-templates/417-grill
                             <div class="col-md-6">
                                 <div class="cart-info">
                                     <i class="fa fa-shopping-cart"></i>
-                                    (<a href="pages/wishlist.php">5 items</a>) in your cart (<a
-                                            href="pages/wishlist.php">$45.80</a>)
+                                    (<a href="pages/wishlist.php"><?php echo $user->getWishlistCount(); ?> items</a>) in
+                                    your cart (<a
+                                            href="pages/wishlist.php">$<?php echo $user->getWishlistPrice(); ?></a>)
                                 </div>
                             </div>
                         </div>

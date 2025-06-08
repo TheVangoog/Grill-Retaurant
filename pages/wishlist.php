@@ -6,7 +6,6 @@ $products = new Products();
 
 $wishlistIds = isset($_COOKIE['wishlist']) ? json_decode($_COOKIE['wishlist'], true) : [];
 
-
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +21,7 @@ $wishlistIds = isset($_COOKIE['wishlist']) ? json_decode($_COOKIE['wishlist'], t
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="mb-0">My Wishlist</h1>
+
         <div class="btn-group">
             <button class="btn btn-primary">
                 <a href="../index.php" class="text-white text-decoration-none">Back</a>
@@ -41,9 +41,7 @@ $wishlistIds = isset($_COOKIE['wishlist']) ? json_decode($_COOKIE['wishlist'], t
 
         foreach ($data as $email => $array) {
             if ($email == $_SESSION['email']) {
-                echo "<div class='col-12'><h4>Your Wishlist Items:</h4></div>";
-
-                // Count occurrences of each item ID
+                // Count occurrences of each item ID first
                 foreach ($array as $item) {
                     if (!isset($item_counts[$item])) {
                         $item_counts[$item] = 0;
@@ -51,23 +49,37 @@ $wishlistIds = isset($_COOKIE['wishlist']) ? json_decode($_COOKIE['wishlist'], t
                     $item_counts[$item]++;
                 }
 
+                // Calculate total after we have item counts
+                $total = 0;
+                foreach (array_unique($array) as $item) {
+                    $product = $products->readID($item);
+                    if (!empty($product)) {
+                        $total += $product[0]['price'] * $item_counts[$item];
+                    }
+                }
+
+                echo "<div class='col-12'><h4>Total: $" . number_format($total, 2) . "</h4></div>";
+                echo "<div class='col-12'><h4>Your Wishlist Items:</h4></div>";
+
                 foreach ($array as $item) {
                     if (!in_array($item, $rendered_ids)) {
-                        $product = $products->readID($item)[0];
-                        echo "<div class='col-md-4'>";
-                        echo "<div class='card h-100'>";
-                        echo "<img src='data:image/jpeg;base64," . base64_encode($product['blobIMG']) . "' class='card-img-top' style='max-height: 200px; object-fit: contain;' alt='" . $product['name'] . "'>";
-                        echo "<div class='card-body'>";
-                        echo "<h5 class='card-title'>" . $product['name'] . "</h5>";
-                        echo "<p class='card-text'>" . $product['description'] . "</p>";
-                        echo "<p class='card-text'>$" . $product['price'] . "</p>";
-                        echo "<div class='d-flex justify-content-end align-items-center'>";
-                        echo "<button class='btn btn-sm btn-outline-secondary me-2' onclick='window.location.href=\"../_functions/remove-wishlist.php?id=" . $item . "\"'>-</button>";
-                        echo "<p class='card-text'>" . $item_counts[$item] . "</p>";
-                        echo "<button class='btn btn-sm btn-outline-secondary me-2' onclick='window.location.href=\"../_functions/add-wishlist.php?id=" . $item . "\"'>+</button>";
-                        echo "</div>";
-                        echo "</div></div></div>";
-                        $rendered_ids[] = $item;
+                        $product = $products->readID($item);
+                        if (!empty($product)) {
+                            echo "<div class='col-md-4'>";
+                            echo "<div class='card h-100'>";
+                            echo "<img src='data:image/jpeg;base64," . base64_encode($product[0]['blobIMG']) . "' class='card-img-top' style='max-height: 200px; object-fit: contain;' alt='" . $product[0]['name'] . "'>";
+                            echo "<div class='card-body'>";
+                            echo "<h5 class='card-title'>" . $product[0]['name'] . "</h5>";
+                            echo "<p class='card-text'>" . $product[0]['description'] . "</p>";
+                            echo "<p class='card-text'>$" . $product[0]['price'] . "</p>";
+                            echo "<div class='d-flex justify-content-end align-items-center'>";
+                            echo "<button class='btn btn-sm btn-outline-secondary me-2' onclick='window.location.href=\"../_functions/remove-wishlist.php?id=" . $item . "\"'>-</button>";
+                            echo "<p class='card-text'>" . $item_counts[$item] . "</p>";
+                            echo "<button class='btn btn-sm btn-outline-secondary me-2' onclick='window.location.href=\"../_functions/add-wishlist.php?id=" . $item . "\"'>+</button>";
+                            echo "</div>";
+                            echo "</div></div></div>";
+                            $rendered_ids[] = $item;
+                        }
                     }
                 }
             }
