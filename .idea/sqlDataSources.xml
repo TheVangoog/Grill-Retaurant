@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="4bf3b1cd-03ee-45f1-a08e-db728aff5d96" />
+          <option name="name" value="grill" />
+          <option name="dbmsName" value="UNKNOWN" />
+          <option name="urls">
+            <array>
+              <option value="file://$USER_HOME$/Downloads/grill.sql" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

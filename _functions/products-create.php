@@ -29,10 +29,16 @@ if (!$name || !$description || !$price) {
     exit();
 }
 
+
+
 try {
     $products->createProduct($name, $description, $price, $image);
     header("location: ../pages/admin.php?success=" . urlencode("Product created successfully"));
 } catch (Exception $e) {
-    header("location: ../pages/admin.php?error=" . urlencode($e->getMessage()));
+    if (strpos($e->getMessage(), '2006') !== false || strpos($e->getMessage(), '1153') !== false) {
+        header("location: ../pages/admin.php?error=Image too big");
+    } else {
+        header("location: ../pages/admin.php?error=" . urlencode($e->getMessage()));
+    }
 }
 exit();

@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/UniversalDB.php';
+require_once __DIR__ . '/Products.php';
 require_once __DIR__ . '/../_functions/debug_to_console.php';
 
 class User
@@ -147,7 +148,17 @@ class User
             if (is_array($decoded)) {
                 $wishlist = $decoded;
                 if (isset($wishlist[$_SESSION['email']])) {
-                    $count = count($wishlist[$_SESSION['email']]);
+                    foreach ($wishlist[$_SESSION['email']] as $id) {
+                        try {
+                            $productDB = new Products();
+                            $product = $productDB->readID($id);
+                            if (!empty($product)) {
+                                $count++;
+                            }
+                        } catch (Exception $e) {
+                            continue;
+                        }
+                    }
                 }
             }
         }

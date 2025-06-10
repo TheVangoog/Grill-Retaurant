@@ -18,19 +18,24 @@ session_start();
 
 <div class="container">
     <div class="row">
+        <div class="col-12 mb-3">
+            <a href="admin.php" class="btn btn-secondary">Back</a>
+        </div>
         <div class="col-md-6 offset-md-3">
             <form method="POST" enctype="multipart/form-data" action="../_functions/products-create.php">
                 <div class="mb-3">
                     <label for="name" class="form-label">Product Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control" id="name" name="name" required maxlength="100">
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="3" required
+                              maxlength="254"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" step="1" required>
+                    <input type="number" class="form-control" id="price" name="price" step="1" required min="0"
+                           max="999">
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Product Image</label>

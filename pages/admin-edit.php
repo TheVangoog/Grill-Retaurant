@@ -19,6 +19,7 @@ $image = $products->readID($id)[0]['blobIMG'];
 </head>
 <body>
 <div class="container mt-5">
+    
     <div class="card">
         <div class="card-header">
             <h3>Edit Product</h3>
@@ -29,19 +30,19 @@ $image = $products->readID($id)[0]['blobIMG'];
                 <div class="mb-3">
                     <label for="name" class="form-label">Product Name</label>
                     <input type="text" class="form-control" id="name" name="name"
-                           value="<?php echo htmlspecialchars($name); ?>" required>
+                           value="<?php echo htmlspecialchars($name); ?>" required maxlength="50">
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" step="1"
+                    <input type="number" class="form-control" id="price" name="price" step="1" min="0" max="999"
                            value="<?php echo htmlspecialchars($price); ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" id="description" name="description" rows="3"
-                              required><?php echo htmlspecialchars($description); ?></textarea>
+                    <textarea maxlength="50" class="form-control" id="description" name="description" rows="3"
+                              required ><?php echo htmlspecialchars($description); ?></textarea>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3">2
                     <label for="image" class="form-label">Product Image</label>
                     <input type="file" class="form-control" id="image" name="image" accept=".jpg,.jpeg,.png,.gif">
                     <?php if ($image): ?>
@@ -49,7 +50,10 @@ $image = $products->readID($id)[0]['blobIMG'];
                              class="mt-2" style="max-width: 200px;">
                     <?php endif; ?>
                 </div>
-                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a href="admin.php" class="btn btn-secondary">Back</a>
+                </div>
             </form>
         </div>
     </div>

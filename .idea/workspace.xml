@@ -5,19 +5,116 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e460ab6e-49c3-4482-834c-85e56e8ecf93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_functions/product-delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_functions/products-create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_functions/products-edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/noImagePlaceholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin-create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin-edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/_functions/add-wishlist.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/_functions/clear-wishlist.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/_functions/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/_functions/debug_to_console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/_functions/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/_functions/register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/_functions/remove-wishlist.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/about-us.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/admin2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/classes/AbstractDB.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/classes/Products.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/classes/UniversalDB.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/classes/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/contact-us.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/create.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/css/flexslider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/css/templatemo_misc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/css/templatemo_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/css/testimonails-slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author-comment1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author-comment2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author-comment3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author-comment4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/author4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/bg-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/blogpost1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/blogpost2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/blogpost3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/blogpost4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/blogpost5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/blogpost6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/div-line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/flickr-image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/flickr-image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/flickr-image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/flickr-image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/open-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product1_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product2_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product3_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product4_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product5_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product6_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product7_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/product8_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/recent-post1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/recent-post2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/recent-post3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/search-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/single-post.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/slide1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/slide2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/slide3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/subscribe-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/timeline1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/timeline2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/timeline3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/timeline4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/timeline5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/timeline6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/images/under-heading.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/js/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/js/vendor/jquery-1.11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/js/vendor/jquery.gmap3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/pages/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/pages/wishlist.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/partials/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/partials/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/partials/heading.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/partials/slider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/products.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grill-Retaurant-main/single-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_functions/products-create.php" beforeDir="false" afterPath="$PROJECT_DIR$/_functions/products-create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_functions/products-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/_functions/products-edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wishlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin-create.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin-create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,23 +136,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/xampp/htdocs/templatemo_417_grill/sql",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\templatemo_417_grill\sql" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\templatemo_417_grill" />
       <recent name="C:\xampp\htdocs\templatemo_417_grill\images" />
     </key>
   </component>
@@ -76,7 +183,8 @@
       <updated>1748694457226</updated>
       <workItem from="1748694458784" duration="15000" />
       <workItem from="1748694510630" duration="2183000" />
-      <workItem from="1749216346169" duration="21286000" />
+      <workItem from="1749216346169" duration="22941000" />
+      <workItem from="1749470875549" duration="5981000" />
     </task>
     <servers />
   </component>

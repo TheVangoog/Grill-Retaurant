@@ -19,25 +19,26 @@ try {
     if ($image === false) {
         throw new Exception("Failed to read file contents");
     }
-} catch (Exception $e) {
+    } catch (Exception $e) {
     $image = null;
-}
-
-
-
-
+    }
 
 if (!$id || !$name || !$description || !$price) {
     header("location: ../pages/admin.php?error=Missing required fields: " . (!$id ? 'Id, ' : '') . (!$name ? 'Name, ' : '') . (!$description ? 'Description, ' : '') . (!$price ? 'Price' : ''));
     exit();
 }
 
+
 try {
     $productDB = new Products();
     $productDB->updateProduct($id, $name, $price, $description, $image);
     header("location: ../pages/admin.php?success=Product updated successfully");
 } catch (Exception $e) {
-    echo $e->getMessage();
+    if (strpos($e->getMessage(), '2006') !== false || strpos($e->getMessage(), '1153') !== false) {
+        header("location: ../pages/admin.php?error=Image too big");
+    } else {
+        header("location: ../pages/admin.php?error=" . urlencode($e->getMessage()));
+    }
 }
 exit();
 ?>

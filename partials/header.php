@@ -74,7 +74,7 @@ http://www.templatemo.com/free-website-templates/417-grill
                                         <li><a href="about-us.php">About</a></li>
                                         <li><a href="products.php">Products</a></li>
                                         <li><a href="contact-us.php">Contact</a></li>
-                                        <li><a href="admin.php">Admin</a></li>
+                                        <li><a href="pages/admin.php">Admin</a></li>
                                     </ul>
                                 </div>
                             </div>

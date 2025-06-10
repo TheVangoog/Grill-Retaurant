@@ -15,6 +15,20 @@ $allProducts = $products->readAll();
 </head>
 <body>
 <div class="container mt-4">
+    <a href="../index.php" class="btn btn-secondary mb-3">Back to Home</a>
+
+    <?php if (isset($_GET['error'])): ?>
+        <div class="alert alert-danger">
+            <?php echo htmlspecialchars($_GET['error']); ?>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($_GET['success'])): ?>
+        <div class="alert alert-success">
+            <?php echo htmlspecialchars($_GET['success']); ?>
+        </div>
+    <?php endif; ?>
+
+
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Products Management</h2>
         <a href="admin-create.php" class="btn btn-success">Create New Product</a>
